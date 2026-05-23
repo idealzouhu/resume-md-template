@@ -1,0 +1,314 @@
+/* 木及「蓝」主题 — 视觉规则来自 example/blue.css 主题段，选择器映射至本项目 DOM */
+
+:root {
+  --accent-rgb: 89, 116, 212;
+  --bg: #ffffff;
+  --text: #747474;
+  --text-heading: #000000;
+  --link: #747474;
+  --link-hover: #616161;
+  --border-subtle: rgba(var(--accent-rgb), 0.35);
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    'Noto Sans',
+    'PingFang SC',
+    'Microsoft YaHei',
+    sans-serif;
+  font-size: 15px;
+  line-height: 1.904;
+  color: var(--text);
+  background: var(--bg);
+  max-width: 794px;
+  margin: 0 auto;
+  padding: 20px 50px 48px;
+}
+
+h1,
+.resume-header h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+h2 {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(var(--accent-rgb), 1);
+  margin: 0 0 5px;
+  padding: 3.333px 0;
+  border-bottom: 1px solid rgba(var(--accent-rgb), 1);
+  line-height: 1.5715;
+}
+
+h2:first-of-type,
+.resume-header + h2 {
+  margin-top: 10px;
+}
+
+h2:not(:first-of-type) {
+  margin-top: 5px;
+}
+
+.resume-header {
+  margin-bottom: 0;
+}
+
+.resume-header--has-photo .resume-header__row {
+  position: relative;
+  min-height: 154px;
+}
+
+.resume-header--has-photo .resume-header__main {
+  padding: 10px calc(110px + 1rem) 10px 0;
+}
+
+.resume-header--has-photo .resume-photo {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.resume-header--has-photo .resume-photo img {
+  width: 110px;
+  height: 154px;
+  max-width: none;
+  aspect-ratio: auto;
+  object-fit: cover;
+  border-radius: 0;
+  border: none;
+}
+
+.resume-icon {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: -0.125em;
+  margin-inline-end: 0.35em;
+  color: inherit;
+}
+
+.resume-icon svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.job-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem 1rem;
+  flex-wrap: wrap;
+  margin: 5px 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.job-row__cell {
+  min-width: 0;
+}
+
+.job-row--cols-1 .job-row__cell--only {
+  flex: 1;
+}
+
+.job-row--cols-2 .job-row__cell--start {
+  flex: 0 1 auto;
+}
+
+.job-row--cols-2 .job-row__cell--end {
+  flex: 0 1 auto;
+  text-align: right;
+  margin-left: auto;
+}
+
+.job-row--cols-3 .job-row__cell--start {
+  flex: 0 1 auto;
+}
+
+.job-row--cols-3 .job-row__cell--mid {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.job-row--cols-3 .job-row__cell--end {
+  flex: 0 1 auto;
+  text-align: right;
+}
+
+.job-row--many .job-row__cell {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: center;
+}
+
+.job-row--many .job-row__cell:first-child {
+  text-align: left;
+}
+
+.job-row--many .job-row__cell:last-child {
+  text-align: right;
+}
+
+@media (max-width: 540px) {
+  body {
+    padding: 20px 24px 48px;
+  }
+
+  .job-row--cols-3 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+  }
+
+  .job-row--cols-3 .job-row__cell--mid,
+  .job-row--cols-3 .job-row__cell--end {
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
+
+.resume-photo {
+  margin: 0;
+}
+
+.resume-photo img {
+  display: block;
+  width: 128px;
+  max-width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 0;
+  border: none;
+}
+
+@media (max-width: 540px) {
+  .resume-header--has-photo {
+    text-align: center;
+  }
+
+  .resume-header--has-photo .resume-header__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 0;
+  }
+
+  .resume-header--has-photo .resume-header__main {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .resume-header--has-photo .resume-photo {
+    position: static;
+    margin-top: 0.75rem;
+  }
+
+  .resume-header--has-photo .resume-photo img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 1.3em;
+  overflow: hidden;
+}
+
+ul li {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+ol li {
+  list-style-position: outside;
+}
+
+li {
+  font-size: 14px;
+  color: var(--text);
+  overflow-wrap: break-word;
+}
+
+li ul,
+li ol {
+  margin: 0 10px;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  background-color: transparent;
+  transition: color 0.3s;
+}
+
+a:hover,
+a:active {
+  color: var(--link-hover);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--link);
+}
+
+@media print {
+  /* 木及无单独 @media print，打印沿用屏幕间距与字号 */
+  body {
+    max-width: none;
+    padding: 0;
+    line-height: 1.904;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  h2 {
+    page-break-after: avoid;
+  }
+
+  .job-row {
+    break-inside: avoid;
+  }
+
+  .resume-header {
+    break-inside: avoid;
+  }
+
+  .resume-header--has-photo .resume-photo img {
+    width: 110px;
+    height: 154px;
+    max-width: none;
+    max-height: none;
+  }
+
+  a,
+  a:link,
+  a:visited {
+    color: var(--text);
+    text-decoration: none;
+  }
+}

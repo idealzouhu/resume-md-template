@@ -1,16 +1,16 @@
-[//]: # '证件照路径相对于 output/resume.html，例如将照片放在项目根目录时写 ../your-photo.jpg'
+[//]: # '证件照路径相对于 output/default.html，例如将照片放在项目根目录时写 ../your-photo.jpg'
 ::: resume-header
 # 陈思远 - Android 开发工程师
 
 男 | 29岁 | 湖北荆州
 
-博客：https://chen-siyuan.dev
+[[icon:blog]][博客](https://chen-siyuan.dev)
 
-邮箱：chen.siyuan@example.com
+[[icon:email]][chen.siyuan@example.com](mailto:chen.siyuan@example.com)
 
-GitHub：https://github.com/chen-siyuan-android
+[[icon:github]][GitHub](https://github.com/chen-siyuan-android)
 
-电话：138-0000-8624
+[[icon:phone]][138-0000-8624](tel:13800008624)
 
 ---
 photo
